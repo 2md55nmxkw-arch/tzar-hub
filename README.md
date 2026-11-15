@@ -38,6 +38,7 @@ This repository holds the **website** ([hub.2md.space](https://hub.2md.space)) a
 - [Contributing](#contributing)
 - [Security](#security)
 - [License](#license)
+- [Credits](#credits)
 - [Disclaimer](#disclaimer)
 
 ## What's inside
@@ -179,6 +180,14 @@ Please don't report security problems in public issues. See **[SECURITY.md](SECU
 TZAR Hub's code and documentation are released under the **[MIT License](LICENSE)**.
 
 The TZAR name and logos, the Teto artwork, game images and third-party fonts and icons are not covered by MIT. **[NOTICE.md](NOTICE.md)** lists what belongs to whom.
+
+## Credits
+
+- Landing page design based on [Skiper UI](https://skiper-ui.com).
+- Type: [Medeo](https://www.npmjs.com/package/medeo-font). Icons: [Lucide](https://lucide.dev).
+- Teto is a character by TWINDRILL.
+
+See [NOTICE.md](NOTICE.md) for details.
 
 ## Disclaimer
 

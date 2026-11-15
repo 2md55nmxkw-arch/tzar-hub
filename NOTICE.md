@@ -24,6 +24,10 @@ The MIT License covers our own work only. The items below are **not** licensed u
 - **npm dependencies** keep their own licenses, listed in `package-lock.json` and in each package. The main ones (React, Vite, Tailwind CSS, Radix UI, motion, cmdk, Shiki, lucide) use MIT or ISC.
 - **Luau tooling** for `admin/` (StyLua, selene, luau-lsp, Lune, darklua) is installed with Rokit and keeps its own licenses.
 
+## Design credit
+
+The look and motion of the landing page (the floating nav and full-screen menu, the rolling headline, the section rhythm and the hands-and-badge closing block) are based on the design of [Skiper UI](https://skiper-ui.com). Thanks to its author for the inspiration. Skiper UI is not affiliated with TZAR Hub, and its original images, fonts and logos are not included in this repository.
+
 ## Questions
 
 If you think something here is used without the right to do so, tell us in the [TZAR Hub Discord](https://discord.gg/As2QHxxVjU) and we will fix it.
