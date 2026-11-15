@@ -11,7 +11,7 @@
 [![Website](https://img.shields.io/badge/site-hub.2md.space-111111.svg)](https://hub.2md.space)
 [![Discord](https://img.shields.io/badge/Discord-TZAR%20Hub-5865F2.svg?logo=discord&logoColor=white)](https://discord.gg/As2QHxxVjU)
 
-[Website](https://hub.2md.space) · [Quick start](https://hub.2md.space/docs/quick-start) · [Cmdr Panel](https://hub.2md.space/docs/cmdr-panel) · [Changelog](https://hub.2md.space/changelog) · [Source viewer](https://hub.2md.space/source)
+[Website](https://hub.2md.space) · [Quick start](https://hub.2md.space/docs/quick-start) · [Cmdr Panel](https://hub.2md.space/docs/cmdr-panel) · [Changelog](https://hub.2md.space/changelog) · [Source viewer](https://hub.2md.space/source) · [Figma](https://www.figma.com/design/0prEY3oeLjOdiNeU7rBrGd/TZAR-Hub-%E2%80%94-UI-Library)
 
 <img src="public/og.png" alt="The TZAR Hub home page: UN-COMMON SCRIPTS FOR ROBLOX over a red flame" width="820" />
 
@@ -183,6 +183,7 @@ The TZAR name and logos, the Teto artwork, game images and third-party fonts and
 
 ## Credits
 
+- Design files: the [TZAR Hub Figma file](https://www.figma.com/design/0prEY3oeLjOdiNeU7rBrGd/TZAR-Hub-%E2%80%94-UI-Library) (hub UI, Cmdr Panel, components, foundations and the website).
 - Landing page design based on [Skiper UI](https://skiper-ui.com).
 - Type: [Medeo](https://www.npmjs.com/package/medeo-font). Icons: [Lucide](https://lucide.dev).
 - Teto is a character by TWINDRILL.

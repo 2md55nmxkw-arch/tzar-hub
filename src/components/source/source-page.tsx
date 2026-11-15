@@ -11,6 +11,7 @@ import {
   TZAR_ADMIN_LOADER,
   TZAR_DISCORD,
   TZAR_LOADER,
+  TZAR_FIGMA,
   TZAR_REPO,
 } from '@/components/landing/tzar-content'
 import {
@@ -320,6 +321,15 @@ export default function SourcePage() {
               GitHub
             </a>
             .
+          </p>
+          <h2 className="pt-6 text-xl font-medium tracking-tight text-foreground">Design files</h2>
+          <p>
+            The designs are open too. One{' '}
+            <a className="underline" href={TZAR_FIGMA} target="_blank" rel="noreferrer">
+              Figma file
+            </a>{' '}
+            holds the in-game hub screens, the Cmdr Panel, the components and foundations, and every
+            page of this website.
           </p>
           <h2 className="pt-6 text-xl font-medium tracking-tight text-foreground">
             What is not here
