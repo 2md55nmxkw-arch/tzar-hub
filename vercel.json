@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/key", "destination": "/docs/quick-start", "permanent": true },
+    { "source": "/user", "destination": "/docs/quick-start", "permanent": true },
+    { "source": "/login", "destination": "/docs/quick-start", "permanent": true },
+    { "source": "/purchase", "destination": "/docs/quick-start", "permanent": true },
+    { "source": "/pricing", "destination": "/", "permanent": true }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

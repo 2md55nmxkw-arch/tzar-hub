@@ -1,0 +1,50 @@
+name: Bug report
+description: Something in the website or a script does not work as it should.
+labels: [bug]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where is the bug?
+      options:
+        - Website (hub.2md.space)
+        - Avatar Changer
+        - Cmdr Panel
+        - A game module
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can we reproduce it?
+      placeholder: |
+        1. Join any game
+        2. Run the loader
+        3. Press ; and type ...
+    validations:
+      required: true
+  - type: input
+    id: executor
+    attributes:
+      label: Executor
+      description: Name and version, for script bugs.
+      placeholder: Potassium 1.x
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      description: For website bugs.
+      placeholder: Chrome 140 on Android
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console output or screenshots
+      description: Paste the executor console or the browser console, and add screenshots if they help.
+      render: text

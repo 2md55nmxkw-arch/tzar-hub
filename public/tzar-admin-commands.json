@@ -1,0 +1,1281 @@
+{
+  "categories": [
+    {
+      "id": "avatar",
+      "title": {
+        "de": "Avatar",
+        "en": "Avatar",
+        "es": "Avatar",
+        "pt": "Avatar",
+        "ru": "Аватар",
+        "uk": "Аватар"
+      }
+    },
+    {
+      "id": "character",
+      "title": {
+        "de": "Charakter",
+        "en": "Character",
+        "es": "Personaje",
+        "pt": "Personagem",
+        "ru": "Персонаж",
+        "uk": "Персонаж"
+      }
+    },
+    {
+      "id": "camera",
+      "title": {
+        "de": "Kamera",
+        "en": "Camera",
+        "es": "Cámara",
+        "pt": "Câmera",
+        "ru": "Камера",
+        "uk": "Камера"
+      }
+    },
+    {
+      "id": "visual",
+      "title": {
+        "de": "Grafik",
+        "en": "Visual",
+        "es": "Visual",
+        "pt": "Visual",
+        "ru": "Визуал",
+        "uk": "Візуал"
+      }
+    },
+    {
+      "id": "utility",
+      "title": {
+        "de": "Werkzeuge",
+        "en": "Utilities",
+        "es": "Utilidades",
+        "pt": "Utilitários",
+        "ru": "Утилиты",
+        "uk": "Утиліти"
+      }
+    },
+    {
+      "id": "hub",
+      "title": {
+        "de": "Hub",
+        "en": "Hub",
+        "es": "Hub",
+        "pt": "Hub",
+        "ru": "Хаб",
+        "uk": "Хаб"
+      }
+    }
+  ],
+  "commands": [
+    {
+      "aliases": {},
+      "args": {},
+      "category": "avatar",
+      "description": {
+        "de": "Öffnet das Avatar-Panel: Spieler hier, Outfits, Körper aus dem Katalog, Emotes.",
+        "en": "Open the avatar panel: players here, outfits, body bundles, emotes.",
+        "es": "Abre el panel de avatar: jugadores aquí, atuendos, cuerpos del catálogo, emotes.",
+        "pt": "Abre o painel de avatar: jogadores aqui, visuais, corpos do catálogo, emotes.",
+        "ru": "Открыть панель аватара: игроки здесь, образы, тела из каталога, эмоции.",
+        "uk": "Відкрити панель аватара: гравці тут, образи, тіла з каталогу, емоції."
+      },
+      "kind": "action",
+      "name": "avatar",
+      "title": {
+        "de": "Avatar-Panel",
+        "en": "Avatar panel",
+        "es": "Panel de avatar",
+        "pt": "Painel de avatar",
+        "ru": "Панель аватара",
+        "uk": "Панель аватара"
+      }
+    },
+    {
+      "aliases": [
+        "wheel"
+      ],
+      "args": {},
+      "category": "avatar",
+      "description": {
+        "de": "Öffnet das Emote-Rad von TZAR.",
+        "en": "Open TZAR's emote wheel.",
+        "es": "Abre la rueda de emotes de TZAR.",
+        "pt": "Abre a roda de emotes do TZAR.",
+        "ru": "Открыть колесо эмоций TZAR.",
+        "uk": "Відкрити колесо емоцій TZAR."
+      },
+      "kind": "action",
+      "name": "emotewheel",
+      "title": {
+        "de": "Emote-Rad",
+        "en": "Emote wheel",
+        "es": "Rueda de emotes",
+        "pt": "Roda de emotes",
+        "ru": "Колесо эмоций",
+        "uk": "Колесо емоцій"
+      }
+    },
+    {
+      "aliases": [
+        "char"
+      ],
+      "args": [
+        {
+          "kind": "user",
+          "name": "user",
+          "optional": false
+        }
+      ],
+      "category": "avatar",
+      "description": {
+        "de": "Trägt den Avatar eines anderen Spielers: jemand auf diesem Server so wie hier, oder jeder Name / jede User-ID aus dem Profil. Nur du siehst es.",
+        "en": "Wear another player's avatar: someone in this server as they look here, or any username / user id from their profile. Only you see it.",
+        "es": "Usa el avatar de otro jugador: alguien de este servidor tal como se ve aquí, o cualquier usuario / id desde su perfil. Solo lo ves tú.",
+        "pt": "Veste o avatar de outro jogador: alguém deste servidor como está aqui, ou qualquer usuário / id do perfil. Só você vê.",
+        "ru": "Надеть аватар другого игрока: с этого сервера, как он выглядит здесь, или любой ник / ID из профиля. Видишь только ты.",
+        "uk": "Вдягнути аватар іншого гравця: з цього сервера, яким він є тут, або будь-який нік / ID з профілю. Бачиш лише ти."
+      },
+      "kind": "value",
+      "name": "wear",
+      "title": {
+        "de": "Avatar tragen",
+        "en": "Wear avatar",
+        "es": "Usar avatar",
+        "pt": "Vestir avatar",
+        "ru": "Надеть аватар",
+        "uk": "Вдягнути аватар"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "outfit",
+          "name": "outfit",
+          "optional": false
+        }
+      ],
+      "category": "avatar",
+      "description": {
+        "de": "Trägt eines deiner gespeicherten Outfits. Nur du siehst es.",
+        "en": "Wear one of your saved outfits. Only you see it.",
+        "es": "Usa uno de tus atuendos guardados. Solo lo ves tú.",
+        "pt": "Veste um dos seus visuais salvos. Só você vê.",
+        "ru": "Надеть один из сохранённых образов. Видишь только ты.",
+        "uk": "Вдягнути один зі збережених образів. Бачиш лише ти."
+      },
+      "kind": "value",
+      "name": "outfit",
+      "title": {
+        "de": "Outfit tragen",
+        "en": "Wear outfit",
+        "es": "Usar atuendo",
+        "pt": "Vestir visual",
+        "ru": "Надеть образ",
+        "uk": "Вдягнути образ"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "string",
+          "name": "bundle id",
+          "optional": false
+        }
+      ],
+      "category": "avatar",
+      "description": {
+        "de": "Trägt ein Körper-Bundle aus dem Katalog per ID. Nur du siehst es.",
+        "en": "Wear a body bundle from the catalog by its id. Only you see it.",
+        "es": "Usa un paquete de cuerpo del catálogo por su id. Solo lo ves tú.",
+        "pt": "Veste um pacote de corpo do catálogo pelo id. Só você vê.",
+        "ru": "Надеть тело-бандл из каталога по его ID. Видишь только ты.",
+        "uk": "Вдягнути тіло-бандл з каталогу за його ID. Бачиш лише ти."
+      },
+      "kind": "value",
+      "name": "bundle",
+      "title": {
+        "de": "Bundle tragen",
+        "en": "Wear bundle",
+        "es": "Usar paquete",
+        "pt": "Vestir pacote",
+        "ru": "Надеть бандл",
+        "uk": "Вдягнути бандл"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "rest",
+          "name": "name",
+          "optional": true
+        }
+      ],
+      "category": "avatar",
+      "description": {
+        "de": "Speichert, was du gerade trägst, als Outfit.",
+        "en": "Save what you are wearing now as an outfit.",
+        "es": "Guarda lo que llevas ahora como atuendo.",
+        "pt": "Salva o que você está usando agora como visual.",
+        "ru": "Сохранить то, что на тебе сейчас, как образ.",
+        "uk": "Зберегти те, що на тобі зараз, як образ."
+      },
+      "kind": "action",
+      "name": "saveoutfit",
+      "title": {
+        "de": "Outfit speichern",
+        "en": "Save outfit",
+        "es": "Guardar atuendo",
+        "pt": "Salvar visual",
+        "ru": "Сохранить образ",
+        "uk": "Зберегти образ"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "outfit",
+          "name": "outfit",
+          "optional": false
+        },
+        {
+          "kind": "rest",
+          "name": "name",
+          "optional": false
+        }
+      ],
+      "category": "avatar",
+      "description": {
+        "de": "Gibt einem gespeicherten Outfit einen neuen Namen.",
+        "en": "Give a saved outfit a new name.",
+        "es": "Ponle otro nombre a un atuendo guardado.",
+        "pt": "Dá outro nome a um visual salvo.",
+        "ru": "Дать сохранённому образу новое имя.",
+        "uk": "Дати збереженому образу нову назву."
+      },
+      "kind": "action",
+      "name": "renameoutfit",
+      "title": {
+        "de": "Outfit umbenennen",
+        "en": "Rename outfit",
+        "es": "Renombrar atuendo",
+        "pt": "Renomear visual",
+        "ru": "Переименовать образ",
+        "uk": "Перейменувати образ"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "outfit",
+          "name": "outfit",
+          "optional": false
+        }
+      ],
+      "category": "avatar",
+      "description": {
+        "de": "Löscht ein gespeichertes Outfit.",
+        "en": "Delete a saved outfit.",
+        "es": "Borra un atuendo guardado.",
+        "pt": "Apaga um visual salvo.",
+        "ru": "Удалить сохранённый образ.",
+        "uk": "Видалити збережений образ."
+      },
+      "kind": "action",
+      "name": "deloutfit",
+      "title": {
+        "de": "Outfit löschen",
+        "en": "Delete outfit",
+        "es": "Borrar atuendo",
+        "pt": "Apagar visual",
+        "ru": "Удалить образ",
+        "uk": "Видалити образ"
+      }
+    },
+    {
+      "aliases": {},
+      "args": {},
+      "category": "avatar",
+      "description": {
+        "de": "Zeigt deine gespeicherten Outfits.",
+        "en": "List your saved outfits.",
+        "es": "Lista tus atuendos guardados.",
+        "pt": "Lista seus visuais salvos.",
+        "ru": "Список сохранённых образов.",
+        "uk": "Список збережених образів."
+      },
+      "kind": "action",
+      "name": "outfits",
+      "title": {
+        "de": "Outfits",
+        "en": "Outfits",
+        "es": "Atuendos",
+        "pt": "Visuais",
+        "ru": "Образы",
+        "uk": "Образи"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "outfit",
+          "name": "outfit",
+          "optional": true
+        }
+      ],
+      "category": "avatar",
+      "description": {
+        "de": "Erstellt ein Autoexec-Skript, das das Outfit bei jedem Beitritt anzieht.",
+        "en": "Make an autoexec script that wears the outfit on every join.",
+        "es": "Crea un script de autoexec que pone el atuendo en cada entrada.",
+        "pt": "Cria um script de autoexec que veste o visual a cada entrada.",
+        "ru": "Сделать autoexec-скрипт, который надевает образ при каждом входе.",
+        "uk": "Зробити autoexec-скрипт, який вдягає образ при кожному вході."
+      },
+      "kind": "action",
+      "name": "exportoutfit",
+      "title": {
+        "de": "Outfit exportieren",
+        "en": "Export outfit",
+        "es": "Exportar atuendo",
+        "pt": "Exportar visual",
+        "ru": "Экспорт образа",
+        "uk": "Експорт образу"
+      }
+    },
+    {
+      "aliases": {},
+      "args": {},
+      "category": "avatar",
+      "description": {
+        "de": "Passt getragene Looks an die Avatar-Regeln dieses Spiels an: Skalen, feste Teile, Accessoire-Größen.",
+        "en": "Fit worn looks to this game's avatar rules: scales, forced parts, accessory sizes.",
+        "es": "Ajusta lo que llevas a las reglas de avatar de este juego: escalas, partes forzadas, tamaño de accesorios.",
+        "pt": "Ajusta o que você veste às regras de avatar deste jogo: escalas, partes obrigatórias, tamanho de acessórios.",
+        "ru": "Подгонять надетое под правила этой игры: масштабы, обязательные части, размер аксессуаров.",
+        "uk": "Підганяти вдягнуте під правила цієї гри: масштаби, обов'язкові частини, розмір аксесуарів."
+      },
+      "kind": "toggle",
+      "name": "avatarrules",
+      "title": {
+        "de": "Avatar-Regeln des Spiels",
+        "en": "Game avatar rules",
+        "es": "Reglas de avatar del juego",
+        "pt": "Regras de avatar do jogo",
+        "ru": "Правила аватара игры",
+        "uk": "Правила аватара гри"
+      }
+    },
+    {
+      "aliases": [
+        "e"
+      ],
+      "args": [
+        {
+          "kind": "emote",
+          "name": "emote",
+          "optional": false
+        }
+      ],
+      "category": "avatar",
+      "description": {
+        "de": "Spielt ein Emote von deinem Rad oder per ID. Nur R15; alle sehen es.",
+        "en": "Play an emote from your wheel or by its id. R15 only; everyone sees it.",
+        "es": "Haz un emote de tu rueda o por su id. Solo R15; lo ven todos.",
+        "pt": "Faz um emote da sua roda ou pelo id. Só R15; todos veem.",
+        "ru": "Сыграть эмоцию с колеса или по ID. Только R15; видят все.",
+        "uk": "Зіграти емоцію з колеса або за ID. Лише R15; бачать усі."
+      },
+      "kind": "action",
+      "name": "emote",
+      "title": {
+        "de": "Emote spielen",
+        "en": "Play emote",
+        "es": "Hacer emote",
+        "pt": "Fazer emote",
+        "ru": "Эмоция",
+        "uk": "Емоція"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "string",
+          "name": "emote id",
+          "optional": false
+        },
+        {
+          "kind": "rest",
+          "name": "name",
+          "optional": true
+        }
+      ],
+      "category": "avatar",
+      "description": {
+        "de": "Fügt deinem Rad ein Emote per Katalog-ID hinzu.",
+        "en": "Add an emote to your wheel by its catalog id.",
+        "es": "Añade un emote a tu rueda por su id del catálogo.",
+        "pt": "Adiciona um emote à sua roda pelo id do catálogo.",
+        "ru": "Добавить эмоцию на колесо по ID из каталога.",
+        "uk": "Додати емоцію на колесо за ID з каталогу."
+      },
+      "kind": "action",
+      "name": "addemote",
+      "title": {
+        "de": "Emote hinzufügen",
+        "en": "Add emote",
+        "es": "Añadir emote",
+        "pt": "Adicionar emote",
+        "ru": "Добавить эмоцию",
+        "uk": "Додати емоцію"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "emote",
+          "name": "emote",
+          "optional": false
+        }
+      ],
+      "category": "avatar",
+      "description": {
+        "de": "Nimmt ein Emote von deinem Rad.",
+        "en": "Take an emote off your wheel.",
+        "es": "Quita un emote de tu rueda.",
+        "pt": "Tira um emote da sua roda.",
+        "ru": "Убрать эмоцию с колеса.",
+        "uk": "Прибрати емоцію з колеса."
+      },
+      "kind": "action",
+      "name": "delemote",
+      "title": {
+        "de": "Emote entfernen",
+        "en": "Remove emote",
+        "es": "Quitar emote",
+        "pt": "Tirar emote",
+        "ru": "Убрать эмоцию",
+        "uk": "Прибрати емоцію"
+      }
+    },
+    {
+      "aliases": {},
+      "args": {},
+      "category": "avatar",
+      "description": {
+        "de": "Zeigt die Emotes auf deinem Rad.",
+        "en": "List the emotes on your wheel.",
+        "es": "Lista los emotes de tu rueda.",
+        "pt": "Lista os emotes da sua roda.",
+        "ru": "Список эмоций на колесе.",
+        "uk": "Список емоцій на колесі."
+      },
+      "kind": "action",
+      "name": "emotes",
+      "title": {
+        "de": "Emotes",
+        "en": "Emotes",
+        "es": "Emotes",
+        "pt": "Emotes",
+        "ru": "Эмоции",
+        "uk": "Емоції"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "number",
+          "max": 500,
+          "min": 1,
+          "name": "speed",
+          "optional": true
+        }
+      ],
+      "category": "character",
+      "description": {
+        "de": "Fliegen. WASD zum Bewegen, Leertaste und Strg für die Höhe; am Handy Stick und Sprungtaste.",
+        "en": "Fly around. WASD to move, Space and Ctrl for height; on a phone, the stick and the jump button.",
+        "es": "Volar. WASD para moverte, Espacio y Ctrl para la altura; en el móvil, el joystick y el botón de salto.",
+        "pt": "Voar. WASD para mover, Espaço e Ctrl para a altura; no celular, o analógico e o botão de pulo.",
+        "ru": "Летать. WASD — движение, пробел и Ctrl — высота; на телефоне — стик и кнопка прыжка.",
+        "uk": "Літати. WASD — рух, пробіл і Ctrl — висота; на телефоні — стік і кнопка стрибка."
+      },
+      "kind": "toggle",
+      "name": "fly",
+      "title": {
+        "de": "Fliegen",
+        "en": "Fly",
+        "es": "Volar",
+        "pt": "Voar",
+        "ru": "Полёт",
+        "uk": "Політ"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "number",
+          "max": 500,
+          "min": 1,
+          "name": "speed",
+          "optional": false
+        }
+      ],
+      "category": "character",
+      "description": {
+        "de": "Wie schnell fly fliegt.",
+        "en": "How fast fly moves.",
+        "es": "Qué tan rápido vuela fly.",
+        "pt": "A velocidade do fly.",
+        "ru": "С какой скоростью летает fly.",
+        "uk": "З якою швидкістю літає fly."
+      },
+      "kind": "value",
+      "name": "flyspeed",
+      "title": {
+        "de": "Fluggeschwindigkeit",
+        "en": "Fly speed",
+        "es": "Velocidad de vuelo",
+        "pt": "Velocidade de voo",
+        "ru": "Скорость полёта",
+        "uk": "Швидкість польоту"
+      }
+    },
+    {
+      "aliases": {},
+      "args": {},
+      "category": "character",
+      "description": {
+        "de": "Durch Wände gehen. Nur dein eigener Charakter.",
+        "en": "Walk through walls. Only your own character.",
+        "es": "Atraviesa paredes. Solo tu personaje.",
+        "pt": "Atravessa paredes. Só o seu personagem.",
+        "ru": "Проходить сквозь стены. Только свой персонаж.",
+        "uk": "Проходити крізь стіни. Лише свій персонаж."
+      },
+      "kind": "toggle",
+      "name": "noclip",
+      "title": {
+        "de": "Durch Wände",
+        "en": "Noclip",
+        "es": "Atravesar paredes",
+        "pt": "Atravessar paredes",
+        "ru": "Сквозь стены",
+        "uk": "Крізь стіни"
+      }
+    },
+    {
+      "aliases": [
+        "ws",
+        "walkspeed"
+      ],
+      "args": [
+        {
+          "kind": "number",
+          "max": 500,
+          "min": 0,
+          "name": "speed",
+          "optional": false
+        }
+      ],
+      "category": "character",
+      "description": {
+        "de": "Laufgeschwindigkeit. Ohne Wert wieder die des Spiels.",
+        "en": "Walk speed. Without a value it goes back to the game's own.",
+        "es": "Velocidad al caminar. Sin valor vuelve a la del juego.",
+        "pt": "Velocidade ao andar. Sem valor volta à do jogo.",
+        "ru": "Скорость ходьбы. Без значения — как задала игра.",
+        "uk": "Швидкість ходьби. Без значення — як задала гра."
+      },
+      "kind": "value",
+      "name": "speed",
+      "title": {
+        "de": "Laufgeschwindigkeit",
+        "en": "Walk speed",
+        "es": "Velocidad",
+        "pt": "Velocidade",
+        "ru": "Скорость",
+        "uk": "Швидкість"
+      }
+    },
+    {
+      "aliases": [
+        "jp"
+      ],
+      "args": [
+        {
+          "kind": "number",
+          "max": 1000,
+          "min": 0,
+          "name": "power",
+          "optional": false
+        }
+      ],
+      "category": "character",
+      "description": {
+        "de": "Sprungkraft. Ohne Wert wieder die des Spiels.",
+        "en": "Jump power. Without a value it goes back to the game's own.",
+        "es": "Fuerza de salto. Sin valor vuelve a la del juego.",
+        "pt": "Força do pulo. Sem valor volta à do jogo.",
+        "ru": "Сила прыжка. Без значения — как задала игра.",
+        "uk": "Сила стрибка. Без значення — як задала гра."
+      },
+      "kind": "value",
+      "name": "jumppower",
+      "title": {
+        "de": "Sprungkraft",
+        "en": "Jump power",
+        "es": "Fuerza de salto",
+        "pt": "Força do pulo",
+        "ru": "Сила прыжка",
+        "uk": "Сила стрибка"
+      }
+    },
+    {
+      "aliases": {},
+      "args": {},
+      "category": "character",
+      "description": {
+        "de": "In der Luft erneut springen.",
+        "en": "Jump again in mid-air.",
+        "es": "Vuelve a saltar en el aire.",
+        "pt": "Pula de novo no ar.",
+        "ru": "Прыгать ещё раз прямо в воздухе.",
+        "uk": "Стрибати ще раз просто в повітрі."
+      },
+      "kind": "toggle",
+      "name": "infjump",
+      "title": {
+        "de": "Endlos springen",
+        "en": "Infinite jump",
+        "es": "Salto infinito",
+        "pt": "Pulo infinito",
+        "ru": "Бесконечный прыжок",
+        "uk": "Нескінченний стрибок"
+      }
+    },
+    {
+      "aliases": {},
+      "args": {},
+      "category": "character",
+      "description": {
+        "de": "Setz dich hin, wo du stehst.",
+        "en": "Sit down where you stand.",
+        "es": "Siéntate donde estás.",
+        "pt": "Senta onde você está.",
+        "ru": "Сесть на месте.",
+        "uk": "Сісти на місці."
+      },
+      "kind": "action",
+      "name": "sit",
+      "title": {
+        "de": "Hinsetzen",
+        "en": "Sit",
+        "es": "Sentarse",
+        "pt": "Sentar",
+        "ru": "Сесть",
+        "uk": "Сісти"
+      }
+    },
+    {
+      "aliases": {},
+      "args": {},
+      "category": "character",
+      "description": {
+        "de": "Leg dich hin, wo du stehst.",
+        "en": "Lie down where you stand.",
+        "es": "Túmbate donde estás.",
+        "pt": "Deita onde você está.",
+        "ru": "Лечь на месте.",
+        "uk": "Лягти на місці."
+      },
+      "kind": "action",
+      "name": "lay",
+      "title": {
+        "de": "Hinlegen",
+        "en": "Lay down",
+        "es": "Tumbarse",
+        "pt": "Deitar",
+        "ru": "Лечь",
+        "uk": "Лягти"
+      }
+    },
+    {
+      "aliases": [
+        "addwp"
+      ],
+      "args": [
+        {
+          "kind": "rest",
+          "name": "name",
+          "optional": false
+        }
+      ],
+      "category": "character",
+      "description": {
+        "de": "Speichert deinen Standort als Wegpunkt. Wegpunkte gelten pro Spiel.",
+        "en": "Save where you stand as a waypoint. Waypoints are kept per place.",
+        "es": "Guarda tu posición como punto. Los puntos se guardan por juego.",
+        "pt": "Salva onde você está como ponto. Os pontos ficam por jogo.",
+        "ru": "Сохранить текущее место как точку. Точки свои для каждого плейса.",
+        "uk": "Зберегти поточне місце як точку. Точки свої для кожного плейсу."
+      },
+      "kind": "action",
+      "name": "setwp",
+      "title": {
+        "de": "Wegpunkt speichern",
+        "en": "Save waypoint",
+        "es": "Guardar punto",
+        "pt": "Salvar ponto",
+        "ru": "Сохранить точку",
+        "uk": "Зберегти точку"
+      }
+    },
+    {
+      "aliases": [
+        "goto"
+      ],
+      "args": [
+        {
+          "kind": "waypoint",
+          "name": "waypoint",
+          "optional": false
+        }
+      ],
+      "category": "character",
+      "description": {
+        "de": "Bringt deinen Charakter zu einem gespeicherten Wegpunkt.",
+        "en": "Move your character to a saved waypoint.",
+        "es": "Lleva a tu personaje a un punto guardado.",
+        "pt": "Leva seu personagem a um ponto salvo.",
+        "ru": "Переместить своего персонажа к сохранённой точке.",
+        "uk": "Перемістити свого персонажа до збереженої точки."
+      },
+      "kind": "action",
+      "name": "wp",
+      "title": {
+        "de": "Zum Wegpunkt",
+        "en": "Go to waypoint",
+        "es": "Ir al punto",
+        "pt": "Ir ao ponto",
+        "ru": "К точке",
+        "uk": "До точки"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "waypoint",
+          "name": "waypoint",
+          "optional": false
+        }
+      ],
+      "category": "character",
+      "description": {
+        "de": "Löscht einen gespeicherten Wegpunkt.",
+        "en": "Delete a saved waypoint.",
+        "es": "Borra un punto guardado.",
+        "pt": "Apaga um ponto salvo.",
+        "ru": "Удалить сохранённую точку.",
+        "uk": "Видалити збережену точку."
+      },
+      "kind": "action",
+      "name": "delwp",
+      "title": {
+        "de": "Wegpunkt löschen",
+        "en": "Delete waypoint",
+        "es": "Borrar punto",
+        "pt": "Apagar ponto",
+        "ru": "Удалить точку",
+        "uk": "Видалити точку"
+      }
+    },
+    {
+      "aliases": [
+        "wps"
+      ],
+      "args": {},
+      "category": "character",
+      "description": {
+        "de": "Listet die Wegpunkte dieses Spiels.",
+        "en": "List the waypoints saved for this place.",
+        "es": "Lista los puntos de este juego.",
+        "pt": "Lista os pontos deste jogo.",
+        "ru": "Список точек этого плейса.",
+        "uk": "Список точок цього плейсу."
+      },
+      "kind": "action",
+      "name": "waypoints",
+      "title": {
+        "de": "Wegpunkte",
+        "en": "Waypoints",
+        "es": "Puntos",
+        "pt": "Pontos",
+        "ru": "Точки",
+        "uk": "Точки"
+      }
+    },
+    {
+      "aliases": {},
+      "args": {},
+      "category": "character",
+      "description": {
+        "de": "Verhindert, dass das Spiel dich wegen Inaktivität kickt.",
+        "en": "Stop the game from kicking you for being idle.",
+        "es": "Evita que el juego te expulse por inactividad.",
+        "pt": "Impede que o jogo te expulse por ficar parado.",
+        "ru": "Игра не выкинет за бездействие.",
+        "uk": "Гра не викине за бездіяльність."
+      },
+      "kind": "toggle",
+      "name": "antiafk",
+      "title": {
+        "de": "Anti-AFK",
+        "en": "Anti-AFK",
+        "es": "Anti-AFK",
+        "pt": "Anti-AFK",
+        "ru": "Анти-АФК",
+        "uk": "Анти-АФК"
+      }
+    },
+    {
+      "aliases": [
+        "re"
+      ],
+      "args": {},
+      "category": "character",
+      "description": {
+        "de": "Lässt deinen Charakter neu erscheinen.",
+        "en": "Respawn your character.",
+        "es": "Hace reaparecer a tu personaje.",
+        "pt": "Faz seu personagem renascer.",
+        "ru": "Возродить своего персонажа.",
+        "uk": "Відродити свого персонажа."
+      },
+      "kind": "action",
+      "name": "respawn",
+      "title": {
+        "de": "Respawn",
+        "en": "Respawn",
+        "es": "Reaparecer",
+        "pt": "Renascer",
+        "ru": "Возродиться",
+        "uk": "Відродитися"
+      }
+    },
+    {
+      "aliases": [
+        "ref"
+      ],
+      "args": {},
+      "category": "character",
+      "description": {
+        "de": "Neu erscheinen und an dieselbe Stelle zurück.",
+        "en": "Respawn and come back to the same spot.",
+        "es": "Reaparece y vuelve al mismo sitio.",
+        "pt": "Renasce e volta ao mesmo lugar.",
+        "ru": "Возродиться и вернуться на то же место.",
+        "uk": "Відродитися й повернутися на те саме місце."
+      },
+      "kind": "action",
+      "name": "refresh",
+      "title": {
+        "de": "Auffrischen",
+        "en": "Refresh",
+        "es": "Refrescar",
+        "pt": "Atualizar",
+        "ru": "Обновить",
+        "uk": "Оновити"
+      }
+    },
+    {
+      "aliases": [
+        "cmds",
+        "?"
+      ],
+      "args": [
+        {
+          "kind": "command",
+          "name": "command",
+          "optional": true
+        }
+      ],
+      "category": "hub",
+      "description": {
+        "de": "Befehle auflisten oder Hilfe zu einem zeigen.",
+        "en": "List commands, or show help for one.",
+        "es": "Lista de comandos o ayuda sobre uno.",
+        "pt": "Lista de comandos ou ajuda sobre um.",
+        "ru": "Список команд или справка по одной.",
+        "uk": "Список команд або довідка про одну."
+      },
+      "kind": "action",
+      "name": "help",
+      "title": {
+        "de": "Hilfe",
+        "en": "Help",
+        "es": "Ayuda",
+        "pt": "Ajuda",
+        "ru": "Справка",
+        "uk": "Довідка"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "key",
+          "name": "key",
+          "optional": false
+        },
+        {
+          "kind": "rest",
+          "name": "command",
+          "optional": false
+        }
+      ],
+      "category": "hub",
+      "description": {
+        "de": "Eine Befehlszeile auf eine Taste legen.",
+        "en": "Bind a command line to a key.",
+        "es": "Asigna una línea de comando a una tecla.",
+        "pt": "Liga uma linha de comando a uma tecla.",
+        "ru": "Привязать строку команды к клавише.",
+        "uk": "Прив’язати рядок команди до клавіші."
+      },
+      "kind": "action",
+      "name": "bind",
+      "title": {
+        "de": "Taste belegen",
+        "en": "Bind key",
+        "es": "Asignar tecla",
+        "pt": "Definir atalho",
+        "ru": "Бинд",
+        "uk": "Бінд"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "key",
+          "name": "key",
+          "optional": false
+        }
+      ],
+      "category": "hub",
+      "description": {
+        "de": "Die Belegung einer Taste entfernen.",
+        "en": "Remove a key bind.",
+        "es": "Quita la asignación de una tecla.",
+        "pt": "Remove o atalho de uma tecla.",
+        "ru": "Убрать бинд с клавиши.",
+        "uk": "Прибрати бінд з клавіші."
+      },
+      "kind": "action",
+      "name": "unbind",
+      "title": {
+        "de": "Belegung entfernen",
+        "en": "Unbind key",
+        "es": "Quitar tecla",
+        "pt": "Remover atalho",
+        "ru": "Снять бинд",
+        "uk": "Зняти бінд"
+      }
+    },
+    {
+      "aliases": {},
+      "args": {},
+      "category": "hub",
+      "description": {
+        "de": "Tastenbelegungen zeigen.",
+        "en": "Show key binds.",
+        "es": "Muestra los atajos.",
+        "pt": "Mostra os atalhos.",
+        "ru": "Показать бинды.",
+        "uk": "Показати бінди."
+      },
+      "kind": "action",
+      "name": "binds",
+      "title": {
+        "de": "Belegungen",
+        "en": "Binds",
+        "es": "Atajos",
+        "pt": "Atalhos",
+        "ru": "Бинды",
+        "uk": "Бінди"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "key",
+          "name": "key",
+          "optional": true
+        }
+      ],
+      "category": "hub",
+      "description": {
+        "de": "Taste zum Ein- und Ausblenden des Fensters. Ohne Taste wieder RightShift.",
+        "en": "Key that shows and hides the window. Without a key it goes back to RightShift.",
+        "es": "Tecla que muestra y oculta la ventana. Sin tecla vuelve a RightShift.",
+        "pt": "Tecla que mostra e oculta a janela. Sem tecla volta para RightShift.",
+        "ru": "Клавиша показа окна. Без аргумента — снова RightShift.",
+        "uk": "Клавіша показу вікна. Без аргументу — знову RightShift."
+      },
+      "kind": "action",
+      "name": "togglekey",
+      "title": {
+        "de": "Fenstertaste",
+        "en": "Window key",
+        "es": "Tecla de ventana",
+        "pt": "Tecla da janela",
+        "ru": "Клавиша окна",
+        "uk": "Клавіша вікна"
+      }
+    },
+    {
+      "aliases": [
+        "language"
+      ],
+      "args": [
+        {
+          "kind": "enum",
+          "name": "lang",
+          "optional": false,
+          "options": [
+            "ru",
+            "en",
+            "uk",
+            "es",
+            "pt",
+            "de"
+          ]
+        }
+      ],
+      "category": "hub",
+      "description": {
+        "de": "Sprache der Oberfläche.",
+        "en": "Interface language.",
+        "es": "Idioma de la interfaz.",
+        "pt": "Idioma da interface.",
+        "ru": "Язык интерфейса.",
+        "uk": "Мова інтерфейсу."
+      },
+      "kind": "action",
+      "name": "lang",
+      "title": {
+        "de": "Sprache",
+        "en": "Language",
+        "es": "Idioma",
+        "pt": "Idioma",
+        "ru": "Язык",
+        "uk": "Мова"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "command",
+          "name": "command",
+          "optional": false
+        }
+      ],
+      "category": "hub",
+      "description": {
+        "de": "Einen deaktivierten Befehl wieder erlauben.",
+        "en": "Allow a disabled command again.",
+        "es": "Vuelve a permitir un comando desactivado.",
+        "pt": "Permite de novo um comando desativado.",
+        "ru": "Снова разрешить выключенную команду.",
+        "uk": "Знову дозволити вимкнену команду."
+      },
+      "kind": "action",
+      "name": "enable",
+      "title": {
+        "de": "Befehl aktivieren",
+        "en": "Enable command",
+        "es": "Activar comando",
+        "pt": "Ativar comando",
+        "ru": "Включить команду",
+        "uk": "Увімкнути команду"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "command",
+          "name": "command",
+          "optional": false
+        }
+      ],
+      "category": "hub",
+      "description": {
+        "de": "Einen Befehl aus Liste, Befehlszeile und Belegungen nehmen.",
+        "en": "Hide a command from the list, the command line and binds.",
+        "es": "Oculta un comando de la lista, la línea de comandos y los atajos.",
+        "pt": "Tira um comando da lista, da linha de comando e dos atalhos.",
+        "ru": "Убрать команду из списка, строки команд и биндов.",
+        "uk": "Прибрати команду зі списку, рядка команд і біндів."
+      },
+      "kind": "action",
+      "name": "disable",
+      "title": {
+        "de": "Befehl deaktivieren",
+        "en": "Disable command",
+        "es": "Desactivar comando",
+        "pt": "Desativar comando",
+        "ru": "Выключить команду",
+        "uk": "Вимкнути команду"
+      }
+    },
+    {
+      "aliases": {},
+      "args": {},
+      "category": "hub",
+      "description": {
+        "de": "Einstellungen öffnen.",
+        "en": "Open settings.",
+        "es": "Abre los ajustes.",
+        "pt": "Abre as configurações.",
+        "ru": "Открыть настройки.",
+        "uk": "Відкрити налаштування."
+      },
+      "kind": "action",
+      "name": "settings",
+      "title": {
+        "de": "Einstellungen",
+        "en": "Settings",
+        "es": "Ajustes",
+        "pt": "Configurações",
+        "ru": "Настройки",
+        "uk": "Налаштування"
+      }
+    },
+    {
+      "aliases": [
+        "logs"
+      ],
+      "args": {},
+      "category": "hub",
+      "description": {
+        "de": "Das Hub-Protokoll öffnen.",
+        "en": "Open the hub log.",
+        "es": "Abre el registro del hub.",
+        "pt": "Abre o registro do hub.",
+        "ru": "Открыть лог хаба.",
+        "uk": "Відкрити лог хаба."
+      },
+      "kind": "action",
+      "name": "log",
+      "title": {
+        "de": "Protokoll",
+        "en": "Log",
+        "es": "Registro",
+        "pt": "Registro",
+        "ru": "Лог",
+        "uk": "Лог"
+      }
+    },
+    {
+      "aliases": [
+        "mod"
+      ],
+      "args": [
+        {
+          "kind": "module",
+          "name": "module",
+          "optional": true
+        }
+      ],
+      "category": "hub",
+      "description": {
+        "de": "Öffnet ein Spielmodul: Dutzende Funktionen, Sets und eine Routine.",
+        "en": "Open a game module: dozens of features, sets and a routine.",
+        "es": "Abre un módulo del juego: decenas de funciones, conjuntos y una rutina.",
+        "pt": "Abre um módulo do jogo: dezenas de funções, conjuntos e uma rotina.",
+        "ru": "Открыть игровой модуль: десятки функций, наборы и сценарий.",
+        "uk": "Відкрити ігровий модуль: десятки функцій, набори й сценарій."
+      },
+      "kind": "action",
+      "name": "module",
+      "title": {
+        "de": "Modul",
+        "en": "Module",
+        "es": "Módulo",
+        "pt": "Módulo",
+        "ru": "Модуль",
+        "uk": "Модуль"
+      }
+    },
+    {
+      "aliases": {},
+      "args": [
+        {
+          "kind": "preset",
+          "name": "set",
+          "optional": false
+        }
+      ],
+      "category": "hub",
+      "description": {
+        "de": "Schaltet ein Set von Funktionen eines Moduls an oder aus.",
+        "en": "Turn a module's set of features on or off.",
+        "es": "Activa o desactiva un conjunto de funciones de un módulo.",
+        "pt": "Liga ou desliga um conjunto de funções de um módulo.",
+        "ru": "Включить или выключить набор функций модуля.",
+        "uk": "Увімкнути або вимкнути набір функцій модуля."
+      },
+      "kind": "action",
+      "name": "preset",
+      "title": {
+        "de": "Set",
+        "en": "Set",
+        "es": "Conjunto",
+        "pt": "Conjunto",
+        "ru": "Набор",
+        "uk": "Набір"
+      }
+    },
+    {
+      "aliases": [
+        "exit"
+      ],
+      "args": {},
+      "category": "hub",
+      "description": {
+        "de": "Den Hub ausschalten und alles rückgängig machen, was er geändert hat.",
+        "en": "Turn the hub off and undo everything it changed.",
+        "es": "Apaga el hub y deshace todo lo que cambió.",
+        "pt": "Desliga o hub e desfaz tudo o que ele mudou.",
+        "ru": "Выключить хаб и вернуть всё, что он менял.",
+        "uk": "Вимкнути хаб і повернути все, що він змінював."
+      },
+      "kind": "action",
+      "name": "unload",
+      "title": {
+        "de": "Ausschalten",
+        "en": "Turn off",
+        "es": "Apagar",
+        "pt": "Desligar",
+        "ru": "Выключить",
+        "uk": "Вимкнути"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

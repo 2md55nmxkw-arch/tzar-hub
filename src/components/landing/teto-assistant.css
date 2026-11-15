@@ -1,0 +1,226 @@
+.teto-assistant {
+  position: fixed;
+  right: 24px;
+  bottom: 16px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.teto-trigger {
+  position: relative;
+  display: block;
+  width: 152px;
+  height: 166px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--foreground);
+  -webkit-tap-highlight-color: transparent;
+}
+.teto-character {
+  display: block;
+  width: 152px;
+  height: 152px;
+  overflow: hidden;
+  transform-origin: 50% 100%;
+  animation: teto-breathe 4s ease-in-out infinite;
+}
+.teto-sprite {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('/tzar/mascot/teto-assistant-sheet.webp');
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  animation: teto-idle-frames 5.5s step-end infinite;
+}
+.teto-trigger:hover .teto-sprite {
+  animation: teto-wave-frames 1.4s step-end infinite;
+}
+.teto-assistant[data-active='true'] .teto-sprite {
+  animation: teto-talk-frames 1.5s step-end infinite;
+}
+.teto-label {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 9px;
+  line-height: 22px;
+  padding: 0 10px;
+  border-radius: 7px;
+  background: var(--muted);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+.teto-panel {
+  width: 280px;
+  max-width: calc(100vw - 32px);
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 8px 32px #0002;
+  animation: teto-panel-in 0.2s ease-out;
+}
+.teto-panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font: 600 12px var(--font-sans);
+  letter-spacing: 1px;
+}
+.teto-panel-top small {
+  font-size: 10px;
+  color: var(--primary);
+  letter-spacing: 0;
+}
+.teto-panel-top button {
+  border: 0;
+  background: none;
+  color: inherit;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.teto-panel p {
+  font-size: 13px;
+  margin: 13px 0 16px;
+  line-height: 1.5;
+  color: var(--foreground);
+  opacity: 0.65;
+}
+.teto-panel > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 9px;
+  border-radius: 9px;
+  font-size: 12px;
+  transition: background 0.15s;
+}
+.teto-panel > a:hover,
+.teto-panel-top button:hover {
+  background: var(--muted);
+}
+.teto-panel > a > svg:first-child {
+  color: var(--primary);
+}
+.teto-panel > a span {
+  flex: 1;
+}
+.teto-panel > a > svg:last-child {
+  opacity: 0.4;
+}
+.teto-note {
+  display: block;
+  margin-top: 13px;
+  padding-top: 13px;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+  line-height: 1.6;
+  opacity: 0.45;
+}
+@keyframes teto-breathe {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-2px) rotate(-0.6deg);
+  }
+}
+@keyframes teto-idle-frames {
+  0%,
+  44%,
+  49%,
+  78%,
+  83%,
+  100% {
+    background-position: 0 0;
+  }
+  46%,
+  80% {
+    background-position: 100% 0;
+  }
+}
+@keyframes teto-wave-frames {
+  0%,
+  100% {
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 0 0;
+  }
+}
+@keyframes teto-talk-frames {
+  0%,
+  100% {
+    background-position: 100% 100%;
+  }
+  45% {
+    background-position: 0 100%;
+  }
+  75% {
+    background-position: 0 0;
+  }
+}
+@keyframes teto-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* On phones the mascot is a small corner chip so it does not cover the cards
+   and buttons while scrolling; the trigger keeps its accessible name. */
+@media (max-width: 639px) {
+  .teto-assistant {
+    right: 8px;
+    bottom: 8px;
+  }
+  .teto-trigger {
+    width: 72px;
+    height: 72px;
+  }
+  .teto-character {
+    width: 72px;
+    height: 72px;
+  }
+  .teto-label {
+    display: none;
+  }
+}
+/* Between 640px and 1248px wide the fixed mascot (16px + 166px tall) sits over
+   the footer's right column at the end of the page; extra room below keeps the
+   legal links and the pause-animations switch clickable. */
+@media (min-width: 640px) and (max-width: 1247px) and (min-height: 501px) {
+  body:has(.teto-assistant) footer {
+    padding-bottom: 12rem;
+  }
+}
+/* On short viewports (and at 200%+ zoom) the mascot would cover a large share
+   of the page; its shortcuts are all in the menu and footer. */
+@media (max-height: 500px) {
+  .teto-assistant {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .teto-assistant * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

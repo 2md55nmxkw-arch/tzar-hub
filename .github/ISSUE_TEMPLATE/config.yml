@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and help
+    url: https://discord.gg/As2QHxxVjU
+    about: Ask in the TZAR Hub Discord. Updates are announced there first.
+  - name: Security problem
+    url: https://github.com/2md55nmxkw-arch/tzar-hub/security/advisories/new
+    about: Report security problems privately, not as a public issue.

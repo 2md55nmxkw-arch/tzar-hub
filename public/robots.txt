@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hub.2md.space/sitemap.xml

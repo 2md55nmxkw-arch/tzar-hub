@@ -1,0 +1,5 @@
+{
+  "bundle": { "require_mode": "path" },
+  "generator": { "name": "dense", "column_span": 120 },
+  "rules": ["remove_types", "remove_comments", "remove_spaces"]
+}

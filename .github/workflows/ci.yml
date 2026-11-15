@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  admin:
+    name: TZAR Admin (Luau)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: admin
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rokit and the pinned tools
+        run: |
+          curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
+          echo "$HOME/.rokit/bin" >> "$GITHUB_PATH"
+          "$HOME/.rokit/bin/rokit" install --no-trust-check
+
+      - name: Format (StyLua)
+        run: stylua --check src tests build.luau
+
+      - name: Lint (selene)
+        run: selene src
+
+      - name: Types (luau-lsp, strict, new solver)
+        run: >
+          luau-lsp analyze --flag LuauSolverV2=true --platform roblox
+          --definitions defs/roblox.d.luau --definitions defs/potassium.d.luau src
+
+      - name: Unit tests
+        run: lune run tests/unit/fuzzy
+
+      - name: Bundle is up to date
+        run: lune run build -- --check
+
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm run lint
+      - run: npm run format:check
+
+      - run: npx playwright install --with-deps chromium
+
+      - name: Start preview server
+        run: |
+          npm run preview -- --port 4173 --host 127.0.0.1 &
+          for _ in $(seq 1 40); do
+            if curl -sf http://127.0.0.1:4173 > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          echo "preview server did not start" >&2
+          exit 1
+
+      - name: Verify the site
+        run: npm run check:site
+        env:
+          AUDIT_URL: http://127.0.0.1:4173
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: audit-screenshots
+          path: audit-output/
+          retention-days: 7

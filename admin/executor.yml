@@ -1,0 +1,21 @@
+# Executor globals the hub may touch. Every one is optional at runtime: src/platform/Env.luau checks for it first.
+base: roblox
+name: executor
+globals:
+  getgenv: { args: [] }
+  gethui: { args: [] }
+  writefile: { args: [{ type: string }, { type: string }] }
+  readfile: { args: [{ type: string }] }
+  isfile: { args: [{ type: string }] }
+  isfolder: { args: [{ type: string }] }
+  makefolder: { args: [{ type: string }] }
+  request: { args: [{ type: table }] }
+  setclipboard: { args: [{ type: string }] }
+  getcustomasset: { args: [{ type: string }] }
+  sethiddenproperty: { args: [{ type: any }, { type: string }, { type: any }] }
+  gethiddenproperty: { args: [{ type: any }, { type: string }] }
+  getconnections: { args: [{ type: any }] }
+  queue_on_teleport: { args: [{ type: string }] }
+  identifyexecutor: { args: [] }
+  cloneref: { args: [{ type: any }] }
+  hookmetamethod: { args: [{ type: any }, { type: string }, { type: function }] }

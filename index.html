@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080808" />
+    <script>
+      // Apply the stored theme before the first paint. Without this, light-theme
+      // visitors see a dark flash until the module bundle runs.
+      try {
+        var theme = localStorage.getItem('theme') === 'light' ? 'light' : 'dark'
+        document.documentElement.classList.toggle('dark', theme === 'dark')
+        document.documentElement.style.colorScheme = theme
+        var themeMeta = document.querySelector('meta[name="theme-color"]')
+        if (themeMeta) themeMeta.setAttribute('content', theme === 'dark' ? '#080808' : '#ffffff')
+        // Restore the "pause animations" switch before anything starts moving.
+        if (localStorage.getItem('motion') === 'paused') document.documentElement.dataset.motion = 'paused'
+      } catch (error) {
+        // Storage can be blocked; the default dark theme already applies.
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/tzar/Frame-2-red.svg" />
+    <link rel="canonical" href="https://hub.2md.space/" />
+    <meta name="description" content="TZAR Hub — a free, keyless and open-source Roblox script hub. Copy the loader, open the Cmdr Panel and read every line of the code." />
+    <meta property="og:title" content="TZAR Hub — Roblox script hub" />
+    <meta property="og:description" content="Free, keyless and open source. One loader, no keys, no checkpoints, no ads." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hub.2md.space/" />
+    <meta property="og:site_name" content="TZAR Hub" />
+    <meta property="og:image" content="https://hub.2md.space/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="TZAR Hub — un-common scripts for Roblox" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://hub.2md.space/og.png" />
+    <title>TZAR Hub — Roblox script hub</title>
+  </head>
+  <body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body>
+</html>

@@ -1,0 +1,27 @@
+name: Feature request
+description: Suggest a command, a game module, or a change to the site.
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: What is it for?
+      options:
+        - Website
+        - Avatar Changer
+        - Cmdr Panel
+        - A new game module
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+      description: Describe the idea and the problem it solves.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Anything else?
+      description: Workarounds you use today, examples from elsewhere, or a game link for module ideas.

@@ -1,0 +1,112 @@
+--!strict
+local Types = require("../../Types")
+
+local specs: { Types.CommandSpec } = {
+    {
+        name = "help",
+        icon = "info",
+        aliases = { "cmds", "?" },
+        category = "hub",
+        kind = "action",
+        module = "hub",
+        args = { { name = "command", kind = "command", optional = true } },
+    },
+    {
+        name = "bind",
+        icon = "key",
+        category = "hub",
+        kind = "action",
+        module = "hub",
+        args = { { name = "key", kind = "key" }, { name = "command", kind = "rest" } },
+    },
+    {
+        name = "unbind",
+        icon = "key",
+        category = "hub",
+        kind = "action",
+        module = "hub",
+        args = { { name = "key", kind = "key" } },
+    },
+    { name = "binds", icon = "key", category = "hub", kind = "action", module = "hub" },
+    {
+        name = "togglekey",
+        icon = "keyboard",
+        category = "hub",
+        kind = "action",
+        module = "hub",
+        args = { { name = "key", kind = "key", optional = true } },
+    },
+    {
+        name = "lang",
+        icon = "globe",
+        aliases = { "language" },
+        category = "hub",
+        kind = "action",
+        module = "hub",
+        args = {
+            {
+                name = "lang",
+                kind = "enum",
+                options = { "ru", "en", "uk", "es", "pt", "de" },
+            },
+        },
+    },
+    {
+        name = "enable",
+        icon = "check",
+        category = "hub",
+        kind = "action",
+        module = "hub",
+        args = { { name = "command", kind = "command" } },
+    },
+    {
+        name = "disable",
+        icon = "x",
+        category = "hub",
+        kind = "action",
+        module = "hub",
+        args = { { name = "command", kind = "command" } },
+    },
+    {
+        name = "settings",
+        icon = "settings",
+        category = "hub",
+        kind = "action",
+        module = "hub",
+    },
+    {
+        name = "log",
+        icon = "message",
+        aliases = { "logs" },
+        category = "hub",
+        kind = "action",
+        module = "hub",
+    },
+    {
+        name = "module",
+        icon = "box",
+        aliases = { "mod" },
+        category = "hub",
+        kind = "action",
+        module = "hub",
+        args = { { name = "module", kind = "module", optional = true } },
+    },
+    {
+        name = "preset",
+        icon = "sparkles",
+        category = "hub",
+        kind = "action",
+        module = "hub",
+        args = { { name = "set", kind = "preset" } },
+    },
+    {
+        name = "unload",
+        icon = "log-out",
+        aliases = { "exit" },
+        category = "hub",
+        kind = "action",
+        module = "hub",
+    },
+}
+
+return specs

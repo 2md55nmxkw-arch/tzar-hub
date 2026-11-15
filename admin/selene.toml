@@ -1,0 +1,6 @@
+std = "roblox+executor"
+exclude = ["defs/*", "build.luau", "tests/unit/*"]
+
+[lints]
+# Strict Luau types already catch these; selene's view of typed code is coarser.
+shadowing = "allow"

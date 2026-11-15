@@ -1,0 +1,328 @@
+@import 'tailwindcss' source(none);
+@source "./App.tsx";
+@source "./components/landing";
+@source "./components/source";
+@source "./components/docs";
+@source "./components/ui";
+@source "./hooks";
+@source "./lib";
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+@import './spinner.css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #fff;
+  --foreground: #121212;
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #e53945;
+  --primary-foreground: #fff;
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: #f5f4f3;
+  --muted2: #fcfcfc;
+  --muted3: #f3f3f3;
+  --muted4: #ffffff;
+  --muted-foreground: #4f4f4e;
+  --invert: invert(1);
+  --var-opacity: 0;
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: #e0e0e0;
+  --input: oklch(0.922 0 0);
+  --ring: #e53945;
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: #080808;
+  --foreground: #ededed;
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: #e53945;
+  --primary-foreground: #fff;
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: #121212;
+  --muted2: #161616;
+  --muted3: #232323;
+  --muted4: #232323;
+  --muted-foreground: #9a9a98;
+  --invert: invert(0);
+  --var-opacity: 1;
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: #e53945;
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@theme inline {
+  --font-sans: var(--font-medeo-sans);
+  --font-mono: var(--font-medeo-mono);
+  --font-serif: var(--font-medeo-serif);
+  --color-blue: #e53945;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted2: var(--muted2);
+  --color-muted3: var(--muted3);
+  --color-muted4: var(--muted4);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --animate-collapse: collapse 0.2s ease-out;
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .s {
+    width: 100vw;
+    height: 100vh;
+  }
+  .font-custom {
+    font-family: var(--font-medeo-sans);
+  }
+  .r {
+    border-radius: 3.40282e38px;
+  }
+  .fc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fcc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .font-roman {
+    font-family: var(--font-medeo-serif);
+  }
+  .shadow-glass {
+    box-shadow:
+      0 4px 8px -2px rgb(0 0 0 / 0.06),
+      0 2px 4px -1px transparent;
+  }
+  .dark .shadow-glass {
+    box-shadow:
+      inset 0 7.2563px 14.5126px rgb(255 255 255 / 0.03),
+      inset 0 0.5px 0.5px rgb(255 255 255 / 0.06),
+      inset 0 0.25px 0.25px rgb(255 255 255 / 0.12),
+      0 14.2111px 20.2815px -5.47742px rgb(0 0 0 / 0.37);
+  }
+  /* Background-coloured glow for small text that sits on the flame shader,
+     whose bright crests would otherwise drop contrast to ~2:1. */
+  .text-halo {
+    text-shadow:
+      0 0 3px var(--background),
+      0 0 10px var(--background),
+      0 0 22px var(--background);
+  }
+  .fade-top::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    background: linear-gradient(to top, transparent, var(--background));
+    -webkit-mask-image: linear-gradient(to bottom, black 25%, transparent);
+    mask-image: linear-gradient(to bottom, black 25%, transparent);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 16px));
+  }
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-slow {
+  animation: marquee 60s linear infinite;
+}
+
+/* Theme switch: the new theme wipes in from the bottom, in both directions. */
+::view-transition-group(root) {
+  animation-duration: 0.7s;
+  animation-timing-function: var(--expo-out, ease);
+}
+::view-transition-new(root) {
+  animation-name: theme-reveal-bottom-up;
+}
+::view-transition-old(root) {
+  animation: none;
+  z-index: -1;
+}
+@keyframes theme-reveal-bottom-up {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+.group:hover .marquee-track {
+  animation-play-state: paused;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+@keyframes headline-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.35em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-headline span {
+  animation: headline-enter 600ms both ease-out;
+}
+/* Headings receive focus programmatically after a route change; they are not
+   controls, so no ring. */
+h1[tabindex='-1']:focus {
+  outline: none;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+/* Controls drawn over the flame, where the ring alone is ~1:1: a
+   background-coloured band on both sides of the ring keeps it visible. Opt-in,
+   because the band would cover neighbouring text and component shadows. */
+.focus-halo:focus-visible {
+  box-shadow: 0 0 0 8px var(--background);
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal,
+  .reveal span {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+/* The site's "Pause animations" switch (footer and command palette) mirrors
+   the OS setting above. */
+:root[data-motion='paused'] {
+  scroll-behavior: auto;
+}
+:root[data-motion='paused'] *,
+:root[data-motion='paused'] *::before,
+:root[data-motion='paused'] *::after {
+  animation: none !important;
+  transition: none !important;
+}
