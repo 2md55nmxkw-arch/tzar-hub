@@ -1,3 +1,5 @@
+<a href="https://github.com/2md55nmxkw-arch"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/2md55nmxkw-arch/2md55nmxkw-arch/main/assets/teto/ribbon-tzar-hub-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/2md55nmxkw-arch/2md55nmxkw-arch/main/assets/teto/ribbon-tzar-hub-light.svg"><img src="https://raw.githubusercontent.com/2md55nmxkw-arch/2md55nmxkw-arch/main/assets/teto/ribbon-tzar-hub-dark.svg" width="100%" height="28" alt="tzar-hub is project 01 of 2md55.arch" /></picture></a>
+
 <div align="center">
 
 <img src="public/tzar/Frame-2-red.svg" width="64" height="64" alt="TZAR Hub logo" />
